@@ -1,0 +1,7 @@
+pyzmq==23.0.0
+Pillow==9.1.1
+numpy==1.21.6
+scipy==1.1.0
+scikit-learn==0.20.1
+matplotlib==3.0.2
+pandas==0.23.4
