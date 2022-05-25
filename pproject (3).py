@@ -89,18 +89,4 @@ if uploaded_file:
     with mcol4:
         st.metric("Mean squared error", value=f"{mean_squared_error(y_test, reg.predict(X_test)):.7g}")
 
-    st.write("##### Model intercepts and coefficients :")
-    coefficients = [list(reg.intercept_) + list(reg.coef_[0])] 
-    coef_names = ["intercept"] + xi
-    df2 = pd.DataFrame(coefficients, columns = coef_names) 
-    st.dataframe(df2)
-
-    st.write("##### Model classes :")
-    colnames = [f"Class {i}" for i in range(1,len(reg.classes_)+1)] 
-    df3 = pd.DataFrame([reg.classes_] , columns = colnames) 
-    st.dataframe(df3)
-
-    st.write("##### Predicted probabilities on test data :")
-    df4 = pd.DataFrame(reg.predict_proba(X_test) , columns = colnames) 
-    st.dataframe(df4)
- 
+   
